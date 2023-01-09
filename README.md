@@ -2,7 +2,7 @@
 # 🤖 Discord Server Managing Bot 🤖
 ![GDSC GHRCEM](https://cdn.discordapp.com/attachments/1024311075841249361/1062020570998394931/Screenshot_2023-01-09_201922.png)
 
-## A Discord Bot created to increase engagement of communtiy members and improve managing your discord server ✨
+## A Discord Bot created to increase engagement of community members and improve managing your discord server ✨
 # Bot Developed by : [Harsh Zode](https://github.com/HarshZode)
 ### [Repository Link](https://github.com/HarshZode/GCCP-Project---Discord-Management-Bot)
 ## 🚀 Getting Started
@@ -26,12 +26,18 @@ Make sure you to add all required information in the `.env` file
 * `node .`
 * And then enjoy the features our bot ❤️
 
-## ⛺ A Better Place for Community
-This bot will keep your server safe from people using foul language. 
-It will automatically detect the message contaning any foul language and it will warn the author of the message.
+## ⛺ A Better Place for Community and Community managers.
+A discord server that does not feature interactive sessions and events makes managing community difficult. Discord can be even more problematic for the management team when they themselves are new to it. There are a lot of ways this bot can be useful to you. The bot allows you to use moderation commands such as kick, ban, and timeout easily. Your server will be protected from people using foul language thanks to this bot. 
+Messages that contain foul language will automatically be detected and the author will be warned.
 
-![messageFilter](https://cdn.discordapp.com/attachments/1024311075841249361/1062025720597073960/image.png)
+![messageFilter](https://cdn.discordapp.com/attachments/1024311075841249361/1062025720597073960/image.png) 
 
+Discord events such as 'Watch Parties', 'Movie Nights', or Technical events like 'Introduction to Git and Github', 'AMA session of GCCP',etc do not have any such tools on the internet for tracking participants. In contrast, now you can use "/showmembers" command to get a list of participants in an Excel spreadsheet immediately.
+You can also use this bot to schedule events in your server. This feature is very useful if you want to plan an event or activity for your community. You can set the date and time for the event using `/schedulemessage` command and the bot will remind you and the other members of the event. 
+
+![messageFilter](https://cdn.discordapp.com/attachments/1024311075841249361/1062067965815697489/image.png) 
+
+Overall, this bot is a useful tool for managing and interacting with your Discord community. It helps to keep your server safe, organized, and entertaining for all members.
 
 
 ## All Commands
