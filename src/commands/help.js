@@ -25,6 +25,7 @@ module.exports = {
             { name: '`/senddm`', value: `Send direct message to a member`, inline: true },
             { name: '`/showmembers`', value: `Get the list of members present in the event`, inline: true },
             { name: '`/documentation`', value: `Documentation of the bot`, inline: true },
+            { name: '`/clear`', value: `Delete messages from a channel`, inline: true },
             { name: '`g!vc`', value: `Get members present in Event Voice Channel`, inline: true }
             )
             .setFooter({ text: 'Bot Dev: Harsh Zode', iconURL: 'https://avatars.githubusercontent.com/u/69814744?v=4' });// respect the licence, please avoid editing it.

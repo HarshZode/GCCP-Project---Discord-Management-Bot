@@ -51,11 +51,13 @@ module.exports = {
 
                     await interaction.reply({ embeds:[votedembed], ephemeral: true })
                     return
-                } else {
+                } 
+                else {
+
                     var title = poll.poll[msgid][0]['title']
                     var opt1name = poll.poll[msgid][0]['option-name']
                     var opt2name = poll.poll[msgid][1]['option-name']
-                    var votes = parseInt(poll.poll[msgid][1]['votes'])
+                    var votes = parseInt(poll.poll[msgid][0]['votes'])
                     newvote = votes + 1
                     poll.poll[msgid][0]['votes'] = newvote
                     const info = {

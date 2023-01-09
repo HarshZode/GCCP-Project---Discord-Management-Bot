@@ -1,7 +1,7 @@
 const { SlashCommandBuilder, EmbedBuilder, AttachmentBuilder } = require('discord.js');
 const welcomeChannelId = process.env.WELCOME_CHANNEL_ID;
 const Excel = require('exceljs');
-
+require('dotenv').config();
 module.exports = {
   name: 'messageCreate',
   async execute(message, client) {
@@ -22,15 +22,11 @@ module.exports = {
       .setDescription(`Message Content\n> ${message.content}`)
       .setTitle(`DM recievied from : ${user.username}#${user.discriminator} Id: ${user.id}`)
 
-      await client.channels.cache.get('1058304037965004801').send({embeds: [exampleEmbed]});
+      await client.channels.cache.get(process.env.BOT_DM_CHANNEL).send({embeds: [exampleEmbed]});
     }
     
     if (message.content === 'g!vc') {
-      // doing the same validation here as you did
-      if (!message.member.voice.channel) {
-        await message.reply('Error: Executor of command is not in a Voice Channel.');
-        return;
-      }
+      
       const sendersChannel = message.member.voice.channel;
       var today = new Date();
       var dd = String(today.getDate()).padStart(2, '0');

@@ -1,6 +1,6 @@
 
 const { EmbedBuilder } = require('discord.js');
-
+require('dotenv').config();
 module.exports = {
     name: 'guildMemberAdd',
     async execute(member) {
@@ -15,7 +15,7 @@ module.exports = {
     .setAuthor({ name: 'GDSC GHRCEM', iconURL: 'https://cdn.discordapp.com/attachments/834644376780013574/1023814671809138698/301448943_1414811449025808_6886991396920414630_n.jpg'})
     .setImage('https://pbs.twimg.com/media/E9XhwpcVEAAaLZu.jpg')
     .setThumbnail('https://pbs.twimg.com/media/E9XhwpcVEAAaLZu.jpg')
-      const channel = member.guild.channels.cache.find(ch => ch.id === "1016017940111429643");
+      const channel = member.guild.channels.cache.find(ch => ch.id === process.env.WELCOME_CHANNEL);
       
       channel.send({embeds : [exampleEmbed]});
 

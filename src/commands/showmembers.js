@@ -10,6 +10,7 @@ module.exports = {
   async execute(interaction) {
     user = interaction.user.id;
     author = interaction.guild.members.cache.get(user)
+    const gdsc_role = process.env.ADMIN_ROLE;
     if (author.roles.cache.has(gdsc_role)) {
     await interaction.deferReply();
     const role = interaction.options.get('role').value;
