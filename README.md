@@ -14,7 +14,7 @@ Make sure you have the following applications installed and tokens registered be
 
 ### Before starting
 
-Make sure you to add all required information in the `.env` file
+Make sure to create a dotenv file and add following variables in it.
 
 ![dotEnv](https://cdn.discordapp.com/attachments/1024311075841249361/1062032935999524864/image.png)
 
