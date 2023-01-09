@@ -4,6 +4,7 @@
 
 ## A Discord Bot created to increase engagement of communtiy members and improve managing your discord server ✨
 # Bot Developed by : [Harsh Zode](https://github.com/HarshZode)
+# Repository Link : https://github.com/HarshZode/GCCP-Project---Discord-Management-Bot
 ## 🚀 Getting Started
 
 Make sure you have the following applications installed and tokens registered before starting:
