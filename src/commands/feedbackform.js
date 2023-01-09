@@ -1,6 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
-
+require('dotenv').config();
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('feedbackform')
@@ -19,14 +19,14 @@ module.exports = {
         userId = interaction.user.id;
         author = interaction.guild.members.cache.get(userId)
 
-        const gdsc_role = '1024228824709341194';
+        const gdsc_role = process.env.ADMIN_ROLE;
 
         if (author.roles.cache.has(gdsc_role)) {
         userId = interaction.user.id;
         member = interaction.guild.members.cache.get(userId)
         const title = interaction.options.get('title').value;
         const link = interaction.options.get('link').value;
-        const gdsc_role = '1024228824709341194';
+        const gdsc_role = process.env.ADMIN_ROLE;
         if (member.roles.cache.has(gdsc_role)) {
         const row = new ActionRowBuilder()
             .addComponents(

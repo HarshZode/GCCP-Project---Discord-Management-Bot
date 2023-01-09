@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-
+require('dotenv').config();
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('timeout')
@@ -10,7 +10,7 @@ module.exports = {
         const member = interaction.options.getMember('user');
         const duration = interaction.options.get('time').value;
 
-        const gdsc_role = '1024228824709341194';
+        const gdsc_role = process.env.ADMIN_ROLE;
         user = interaction.user.id;
         author = interaction.guild.members.cache.get(user)
         if (author.roles.cache.has(gdsc_role)) {

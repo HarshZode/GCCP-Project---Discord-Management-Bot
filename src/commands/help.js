@@ -10,7 +10,7 @@ module.exports = {
             .setColor(0xFFFFFF)
             .setTimestamp()
             .setTitle(`Commands of GDSC GHRCEM BOT`)
-            .setDescription(`Made with <a:purpleheart:1061968785369731133> for GDSC GHRCEM Discord Server\n<:discord_bot_dev:1061968117930139648> Made by: [Harsh Zode](https://github.com/HarshZode)`)
+            .setDescription(`Made with <a:purpleheart:1061968785369731133> for GDSC GHRCEM Discord Server\n<:discord_bot_dev:1061968117930139648> Made by: [Harsh Zode](https://github.com/HarshZode)\n`)
             .setAuthor({ name: 'GDSC GHRCEM', iconURL: 'https://cdn.discordapp.com/attachments/834644376780013574/1023814671809138698/301448943_1414811449025808_6886991396920414630_n.jpg' })
             .setFields( { name: '`/help`', value: `Shows help info and commands`, inline: true },
             { name: '`/ban`', value: `Ban a member from the server`, inline: true },

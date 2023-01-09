@@ -1,6 +1,6 @@
 const { SlashCommandBuilder } = require( '@discordjs/builders');
-const
-      {EmbedBuilder, PermissionsBitField} = require('discord.js')
+const{EmbedBuilder, PermissionsBitField} = require('discord.js')
+require('dotenv').config();
 module.exports= {
     data: new SlashCommandBuilder()
     .setName('clear')
@@ -9,7 +9,7 @@ module.exports= {
      async execute (interaction, client) {
         user = interaction.user.id;
         author = interaction.guild.members.cache.get(user)
-        const gdsc_role = '1024228824709341194';
+        const gdsc_role = process.env.ADMIN_ROLE;
 
         if (author.roles.cache.has(gdsc_role)) {
         const amount = interaction.options.getInteger('amount');

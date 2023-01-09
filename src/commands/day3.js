@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
 const { loadavg } = require('os');
-
+require('dotenv').config();
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('day3')
@@ -10,12 +10,12 @@ module.exports = {
 
     async execute(interaction) {
 
-        if (interaction.channel.id === '1024311075841249361') {
+        if (interaction.channel.id === process.env.ADMIN_CHANNEL) {
             user = interaction.options.get('user').value;
 
             userId = interaction.user.id;
             member = interaction.guild.members.cache.get(userId)
-            const gdsc_role = '1024228824709341194';
+            const gdsc_role = process.env.ADMIN_ROLE;
             if (member.roles.cache.has(gdsc_role)) {
                 member = interaction.guild.members.cache.get(user)
                 const day2_role = '1023241239530836068'

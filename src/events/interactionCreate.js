@@ -1,6 +1,6 @@
 const { EmbedBuilder } = require('discord.js');
 const fs = require("fs");
-
+require('dotenv').config();
 global.progressBar = (value, maxValue, size) => {
     const percentage = value / maxValue; // Calculate the percentage of the bar
     const progress = Math.round((size * percentage)); // Calculate the number of square caracters to fill the progress side.
@@ -206,7 +206,7 @@ module.exports = {
         const command = interaction.client.commands.get(interaction.commandName);
 
         if (!command) return;
-        // if (interaction.channel.id === '1024311075841249361') {
+        // if (interaction.channel.id === process.env.ADMIN_CHANNEL) {
         try {
             await command.execute(interaction, client);
         } catch (error) {

@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-
+require('dotenv').config();
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('ban')
@@ -7,7 +7,7 @@ module.exports = {
         .addUserOption(option => option.setName('user').setDescription('Enter a user').setRequired(true)),
 	async execute(interaction) {
         const member = interaction.options.getMember('user');
-        const gdsc_role = '1024228824709341194';
+        const gdsc_role = process.env.ADMIN_ROLE;
         user = interaction.user.id;
         author = interaction.guild.members.cache.get(user)
         if (author.roles.cache.has(gdsc_role)) {

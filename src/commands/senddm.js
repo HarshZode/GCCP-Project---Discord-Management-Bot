@@ -1,5 +1,5 @@
 const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
-
+require('dotenv').config();
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('senddm')
@@ -12,7 +12,7 @@ module.exports = {
         user = interaction.user.id;
         author = interaction.guild.members.cache.get(user)
 
-        const gdsc_role = '1024228824709341194';
+        const gdsc_role = process.env.ADMIN_ROLE;
 
         if (author.roles.cache.has(gdsc_role)) {
         const message = interaction.options.get('message').value;

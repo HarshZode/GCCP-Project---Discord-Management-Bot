@@ -1,6 +1,7 @@
 const { SlashCommandBuilder, EmbedBuilder, AttachmentBuilder } = require('discord.js');
 const Excel = require('exceljs');
 const fs = require("fs");
+require('dotenv').config();
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('pollresult')
@@ -15,7 +16,7 @@ module.exports = {
         userId = interaction.user.id;
         author = interaction.guild.members.cache.get(userId)
 
-        const gdsc_role = '1024228824709341194';
+        const gdsc_role = process.env.ADMIN_ROLE;
 
         if (author.roles.cache.has(gdsc_role)) {
 

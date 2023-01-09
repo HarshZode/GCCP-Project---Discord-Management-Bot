@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('discord.js');
 const { EmbedBuilder } = require('discord.js');
 const { loadavg } = require('os');
-
+require('dotenv').config();
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('commonrole')
@@ -10,7 +10,7 @@ module.exports = {
 
     async execute(interaction) {
         await interaction.deferReply();
-        if (interaction.channel.id === '1024311075841249361') {
+        if (interaction.channel.id === process.env.ADMIN_CHANNEL) {
             const role = interaction.options.get('role').value;
             const roleName = interaction.options.get('role').role.name;
             let everyone = await interaction.guild.members.fetch()
@@ -20,7 +20,7 @@ module.exports = {
             userId = interaction.user.id;
             author = interaction.guild.members.cache.get(userId)
 
-            const gdsc_role = '1024228824709341194';
+            const gdsc_role = process.env.ADMIN_ROLE;
 
             len = theArray.length;
 

@@ -2,7 +2,7 @@ const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
 const { ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const fs = require('fs');
 const { title } = require('process');
-
+require('dotenv').config();
 global.progressBar = (value, maxValue, size) => {
     const percentage = value / maxValue; // Calculate the percentage of the bar
     const progress = Math.round((size * percentage)); // Calculate the number of square caracters to fill the progress side.
@@ -50,7 +50,7 @@ module.exports = {
         userId = interaction.user.id;
         author = interaction.guild.members.cache.get(userId)
 
-        const gdsc_role = '1024228824709341194';
+        const gdsc_role = process.env.ADMIN_ROLE;
 
         if (author.roles.cache.has(gdsc_role)) {
 
