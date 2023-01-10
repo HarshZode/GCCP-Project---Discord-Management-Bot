@@ -15,6 +15,13 @@ Make sure you have the following applications installed and tokens registered be
 ### Before starting
 
 Make sure to create a dotenv file and add following variables in it.
+### Bot Token
+
+Replace `YOUR_BOT_TOKEN` with the actual token of your bot. If you don't know how to get your bot's token, [read this](https://www.writebots.com/discord-bot-token/).
+
+### MongoDB Connection Uri
+
+Fill the `MONGODB_LINK` field with your MongoDB Cluster's Connection Uri. If you do not know how to fetch the uri string, please read **[here](https://docs.mongodb.com/guides/cloud/connectionstring/)**
 
 ![dotEnv](https://cdn.discordapp.com/attachments/1024311075841249361/1062032935999524864/image.png)
 
