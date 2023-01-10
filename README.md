@@ -18,6 +18,10 @@ Make sure to create a dotenv file and add following variables in it.
 
 ![dotEnv](https://cdn.discordapp.com/attachments/1024311075841249361/1062032935999524864/image.png)
 
+Add your Bot client id and your server id in `deploy-commands.js`
+
+![dotEnv](https://cdn.discordapp.com/attachments/1024311075841249361/1062230427907149905/image.png)
+
 ### Install modules
 * Launch an Admin Command Prompt in the Bot directory.
 * Make sure `Package.json` is in the file location
